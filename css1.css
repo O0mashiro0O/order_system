@@ -1,0 +1,273 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+/*
+    form{
+        display:inline-block;
+        width:auto;
+        height:auto;
+        }*/
+div.FoodName {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+/*  菜單介紹線  */
+.menu {
+    height: 60px;
+    line-height: 1px;
+    text-align: center;
+}
+
+.menu .line {
+    display: inline-block;
+    width: 20%;
+    border-top: 3px solid rgb(155, 154, 154);
+}
+
+.menu .txt {
+    color: rgb(69, 69, 69);
+    vertical-align: middle;
+    font-size: 270%;
+}
+
+
+
+/*大於1295*/
+@media (min-width: 1295px) {
+    .imagesize {
+        width: 20vw;
+        height: 20vw;
+    }
+}
+
+/*小於1295*/
+@media (max-width: 1295px) {
+    .imagesize {
+        width: 35vw;
+        height: 35vw;
+    }
+}
+
+
+.FoodName {
+    font-size: 185%;
+    color: rgb(69, 69, 69);
+}
+
+.FoodPrice {
+    font-size: 150%;
+    color: rgb(89, 89, 89);
+}
+
+/*小於1295*/
+@media (max-width: 1295px) {
+
+    .imagesize,
+    .FoodName,
+    .FoodPrice {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+
+/*大於1295*/
+@media (max-width: 1295px) {
+
+    .imagesize,
+    .FoodName,
+    .FoodPrice {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+}
+
+
+/*  Boostrap Modal  */
+
+.btn-close {
+    position: absolute;
+    /* 相對於 .modal-header 定位 */
+    top: 34%;
+    /* 距離 header 頂端的距離 */
+    right: 15px;
+    /* 距離 header 右側的距離 */
+}
+
+.modal-content {
+    background-color: burlywood;
+}
+
+.modal-header {
+    position: relative;
+    /* 讓 .btn-close 相對於此元素定位 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    /* 設定固定高度 */
+}
+
+.modal-header h3 {
+    font-size: 30px;
+    color: rgb(133, 30, 30);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.modal-body form .account,
+.modal-body form .password {
+    margin: 30px;
+    width: 90%;
+    border-radius: 20px;
+}
+
+.remember {
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-body form .btn {
+    width: 100%;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+/*
+.modal-footer form .btn{
+    width: 100%;
+    font-size: 25px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+}
+*/
+
+
+/*  三條線  */
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FAD6894D;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: rgb(133, 30, 30);
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 150%;
+    cursor: pointer;
+    color: rgb(133, 30, 30);
+    background-color: rgba(1, 1, 1, 0);
+    align-content: left;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: rgba(212, 212, 212);
+    color: #FAD6894D;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/*三條線*/
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+
+
+/*  數量增減  */
+
+.qty {
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 50px;
+    text-align: center;
+    height: 35px;
+    background: #f8f8f8;
+    margin: 10px 0px;
+}
+
+/*大於1295*/
+@media (min-width: 1295px) {
+    input.qtyplus input.qtyminus {
+        width: 11%;
+        height: 150%;
+        background: #f8f8f8;
+        border: none;
+        border-radius: 5px;
+        font-size: 30px;
+        cursor: pointer;
+        margin: 10px 0px;
+    }
+}
+
+/*小於1295*/
+@media (max-width: 1295px) {
+
+    input.qtyminus,
+    input.qtyplus {
+        width: 11%;
+        height: 300%;
+        border: 1px solid #7c1212;
+        background: #d10606;
+    }
+}
+
+/*最下面*/
+.table {
+    background-color: rgba(247, 201, 148, 0.508);
+    padding: 2%;
+    width: 100%;
+    font-size: 170%;
+}
+
+/*幻燈片*/
+#lightslider-wrapper {
+    /*幻燈片大小*/
+    width: 95.4%;
+    margin: 0 auto;
+}
+
+#lightslider img {
+    /*圖片間隙*/
+    width: calc(99.5%);
+}

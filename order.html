@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+
+
+    <!--CSS引用-->
+    <link rel="stylesheet" type="text/css" href="css1.css">
+    <!-- Boodtrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JQuery lightSlider v1.1.6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Boodtrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!--後端-->
+</head>
+
+
+
+<body>
+
+    <!--三條線往右縮排-->
+    <div id="main">
+        <button onclick="button()">button</button>
+        <!-- 內中Logo -->
+        <img style="width:48%;height:38%;padding:2%;float:left;display:block;"
+            src="https://thumbsnap.com/i/FdYtiq2t.png">
+
+        <!--目錄-->
+        <div style="padding:4.5% 0% 4.5% 0%;"></div>
+        <div
+            style="padding: 1% 2% 1% 2%;margin:0% 2.30%;background-color:#FAD6894D;align-items:left;border-radius: 10px;">
+            <button class="openbtn" onclick="openNav()">☰目錄</button>
+
+
+            <!-- 會員登入 -->
+            <a href="#" type="button" id="submitOrderBtn" data-bs-toggle="modal" data-bs-target="#checkout"
+                style="float:right;text-align:center;text-decoration:none;font-size:150%;color:rgb(133, 30, 30);padding:0% 2% 0% 5%;">結帳</a>
+            <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"
+                style="float:right;text-align:center;text-decoration:none;font-size:150%;color:rgb(133, 30, 30);">會員登入</a>
+            <a style="float:right;">&nbsp&nbsp&nbsp&nbsp</a>
+        </div>
+
+
+        <!--三條線-->
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#self_serve">自助</a>
+            <a href="#noodle">麵食</a>
+            <a href="#fast_food">速食</a>
+            <a href="https://www.nhsh.tp.edu.tw/">內湖高中官網</a>
+            <a
+                href="https://sites.google.com/nhsh.tp.edu.tw/life/%E9%A6%96%E9%A0%81/%E9%A3%9F%E7%89%A9%E7%AF%87?authuser=0">熱食部介紹</a>
+        </div>
+
+
+        <!--幻燈片-->
+        <div id="lightslider-wrapper">
+            <ul id="lightslider">
+                <li data-thumb="https://www.linkpicture.com/q/bds_aboutus.png">
+                    <img src='https://www.linkpicture.com/q/bds_aboutus.png' type='image'></a>
+                </li>
+                <li data-thumb="https://www.linkpicture.com/q/Food-Image.jpg">
+                    <img src='https://www.linkpicture.com/q/Food-Image.jpg' type='image'></a>
+                </li>
+                <li data-thumb="https://www.linkpicture.com/q/Restaurant-license.webp">
+                    <img src='https://www.linkpicture.com/q/Restaurant-license.webp' type='image'></a>
+                </li>
+                <li data-thumb="https://www.linkpicture.com/q/Thank-You-Page-Image_1500x.jpg">
+                    <img src='https://www.linkpicture.com/q/Thank-You-Page-Image_1500x.jpg' type='image'></a>
+                </li>
+                <li>
+                    <img class="slider-img" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg">
+                </li>
+                <li>
+                    <img class="slider-img" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg">
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+        <!-- 跳出視窗內容 -->
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 style="font-weight:bold">內湖高中熱食部</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 登入表單 -->
+                        <form>
+                            <!-- email -->
+                            <div class="form-group">
+                                <input type="email" class="account form-control" placeholder="帳號">
+                            </div>
+                            <!-- password -->
+                            <div class="form-group">
+                                <input type="password" class="password form-control" placeholder="密碼">
+                            </div>
+                            <!-- checkbox -->
+                            <div class="form-group">
+                                <input type="checkbox" class="remember">記住我的密碼
+                            </div>
+                            <!-- 送出按鈕 -->
+                            <button type="button" class="btn btn-info"
+                                style="background-color:#FAD6894D;color:rgb(133, 30, 30);border-color:rgb(133, 30, 30);">
+                                <a href="eat3.html" style="color:rgb(133, 30, 30);text-decoration:none;">登入</a></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--訂單內容 -->
+        <div class="modal fade" id="checkout">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="text-center" style="font-weight:bold;">訂單內容</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-message modal-body">
+                    </div>
+                    <div class="modal-message2 modal-body">
+                        <form>
+                            <!--
+                            <div class="form-group">
+                                <input type="checkbox" class="remember">請確認訂單，送出後不可更改
+                            </div>
+                            -->
+                            <div class="form-group">
+                                <button type="button" class="btn btn-info"
+                                    style="background-color:#FAD6894D;color:rgb(133, 30, 30);border-color:rgb(133, 30, 30);">
+                                    <a href="eat3.html" style="color:rgb(133, 30, 30);text-decoration:none;">確認送出</a>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--菜單頁面-->
+        <center>
+
+            <!--line-->
+            <div class="menu" style="padding:3%;">
+                <span style="white-space:pre"></span><span class="line"></span>
+                <span style="white-space:pre"></span><a class="txt" id="self_serve" style="text-decoration: none;">&nbsp
+                    自助區
+                    &nbsp</a>
+                <span style="white-space:pre"></span><span class="line"></span>
+            </div>
+
+
+            <div class="container-intro" style="display:inline-flex;padding:2%;">
+                <div class="row">
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">高麗菜</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <labe>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='Cabbage' />
+                                <input type='number' name='Cabbage' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Cabbage' />
+                                </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">花椰菜</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='Brocoli' />
+                                <input type='number' name='Brocoli' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Brocoli' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">茄子</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='Eggplant' />
+                                <input type='number' name='Eggplant' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Eggplant' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">紅蘿蔔炒蛋</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='CarrotScrambledEggs' />
+                                <input type='number' name='CarrotScrambledEggs' value='0' class='qty' max="10"
+                                    min="0" />
+                                <input type='button' value='+' class='qtyplus' field='CarrotScrambledEggs' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">炸塊狀豆腐</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='FriedChunkyTofu' />
+                                <input type='number' name='FriedChunkyTofu' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='FriedChunkyTofu' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">豆干</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='DriedTofu' />
+                                <input type='number' name='DriedTofu' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='DriedTofu' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">蒸蛋</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='SteamedEgg' />
+                                <input type='number' name='SteamedEgg' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='SteamedEgg' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">小黃瓜炒蛋</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='CucumberScrambledEggs' />
+                                <input type='number' name='CucumberScrambledEggs' value='0' class='qty' max="10"
+                                    min="0" />
+                                <input type='button' value='+' class='qtyplus' field='CucumberScrambledEggs' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">馬鈴薯焗烤</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='PotatoGratin' />
+                                <input type='number' name='PotatoGratin' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='PotatoGratin' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">咖哩</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='Curry' />
+                                <input type='number' name='Curry' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Curry' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">番茄炒蛋</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='TomatoScrambledEggs' />
+                                <input type='number' name='TomatoScrambledEggs' value='0' class='qty' max="10"
+                                    min="0" />
+                                <input type='button' value='+' class='qtyplus' field='TomatoScrambledEggs' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">韓式年糕</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='KoreanRiceCake' />
+                                <input type='number' name='KoreanRiceCake' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='KoreanRiceCake' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">宮保雞丁</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$20</span>
+                                <input type='button' value='-' class='qtyminus' field='KungPaoChicken' />
+                                <input type='number' name='KungPaoChicken' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='KungPaoChicken' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">魚排</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_orderr'>
+                            <label>
+                                <span class="FoodPrice">$20</span>
+                                <input type='button' value='-' class='qtyminus' field='FishSteak' />
+                                <input type='number' name='FishSteak' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='FishSteak' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">G排</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$20</span>
+                                <input type='button' value='-' class='qtyminus' field='RowG' />
+                                <input type='number' name='RowG' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='RowG' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">O排</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$1000</span>
+                                <input type='button' value='-' class='qtyminus' field='Opie' />
+                                <input type='number' name='Opie' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Opie' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">小鮮肉</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$20</span>
+                                <input type='button' value='-' class='qtyminus' field='SmallFreshMeat' />
+                                <input type='number' name='SmallFreshMeat' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='SmallFreshMeat' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">香腸</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$20</span>
+                                <input type='button' value='-' class='qtyminus' field='Sausage' />
+                                <input type='number' name='Sausage' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Sausage' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">泡菜炒肉</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$20</span>
+                                <input type='button' value='-' class='qtyminus' field='KimchiFriedPork' />
+                                <input type='number' name='KimchiFriedPork' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='KimchiFriedPork' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">炒豬肉</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$20</span>
+                                <input type='button' value='-' class='qtyminus' field='FriedPork' />
+                                <input type='number' name='FriedPork' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='FriedPork' />
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!--line-->
+
+            <div class="menu" style="padding:3%;">
+                <span style="white-space:pre"></span><span class="line"></span>
+                <span style="white-space:pre"></span><a class="txt" id="noodle" style="text-decoration: none;">&nbsp
+                    麵食區 &nbsp</a>
+                <span style="white-space:pre"></span><span class="line"></span>
+            </div>
+
+            
+
+
+
+            <div class="container-intro" style="display:inline-flex;padding:2%;">
+                <div class="row">
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">麻辣燙</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$60</span>
+                                <input type='button' value='-' class='qtyminus' field='MalaTang' />
+                                <input type='number' name='MalaTang' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='MalaTang' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">千穗燙</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$60</span>
+                                <input type='button' value='-' class='qtyminus' field='ChihoHot' />
+                                <input type='number' name='ChihoHot' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='ChihoHot' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">麻辣湯餃</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$60</span>
+                                <input type='button' value='-' class='qtyminus' field='SpicySoupDumplings' />
+                                <input type='number' name='SpicySoupDumplings' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='SpicySoupDumplings' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">牛奶鍋</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$60</span>
+                                <input type='button' value='-' class='qtyminus' field='MilkPot' />
+                                <input type='number' name='MilkPot' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='MilkPot' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">味噌拉麵</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$60</span>
+                                <input type='button' value='-' class='qtyminus' field='miso_ramen' />
+                                <input type='number' name='miso_ramen' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='miso_ramen' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">醬油拉麵</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$60</span>
+                                <input type='button' value='-' class='qtyminus' field='soy_sauce_ramen' />
+                                <input type='number' name='soy_sauce_ramen' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='soy_sauce_ramen' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">管狀義大利麵</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$60</span>
+                                <input type='button' value='-' class='qtyminus' field='tube_pasta' />
+                                <input type='number' name='tube_pasta' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='tube_pasta' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">起司鍋</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$60</span>
+                                <input type='button' value='-' class='qtyminus' field='cheesepot' />
+                                <input type='number' name='cheesepot' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='cheesepot' />
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!--餐點內容-->
+            <div class="menu" style="padding:3%;">
+                <span style="white-space:pre"></span><span class="line"></span>
+                <span style="white-space:pre"></span><a id="fast_food" class="txt" style="text-decoration: none;">&nbsp
+                    速食區
+                    &nbsp</a>
+                <span style="white-space:pre"></span><span class="line"></span>
+            </div>
+
+
+            <div class="container-intro" style="display:inline-flex;padding:2%;">
+                <div class="row">
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">總匯</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$10</span>
+                                <input type='button' value='-' class='qtyminus' field='Summary' />
+                                <input type='number' name='Summary' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Summary' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">石田</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$100000</span>
+                                <input type='button' value='-' class='qtyminus' field='Ishida' />
+                                <input type='number' name='Ishida' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Ishida' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">飲料</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$15</span>
+                                <input type='button' value='-' class='qtyminus' field='Drinks' />
+                                <input type='number' name='Drinks' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Drinks' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">吐司</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$30</span>
+                                <input type='button' value='-' class='qtyminus' field='Toast' />
+                                <input type='number' name='Toast' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Toast' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">鐵板麵</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$40</span>
+                                <input type='button' value='-' class='qtyminus' field='IronPlateNoodles' />
+                                <input type='number' name='IronPlateNoodles' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='IronPlateNoodles' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">蛋餅</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$25</span>
+                                <input type='button' value='-' class='qtyminus' field='EggCake' />
+                                <input type='number' name='EggCake' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='EggCake' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">漢堡</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$40</span>
+                                <input type='button' value='-' class='qtyminus' field='Hamburger' />
+                                <input type='number' name='Hamburger' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Hamburger' />
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col"><img class="imagesize" src="https://www.linkpicture.com/q/IMG_78ABFCB93E8F-1.jpeg"
+                            alt="food">
+                        <div class="FoodName">點心</div>
+                        <form id='myform' method='POST' action='http://localhost:8080/submit_order'>
+                            <label>
+                                <span class="FoodPrice">$20</span>
+                                <input type='button' value='-' class='qtyminus' field='Dessert' />
+                                <input type='number' name='Dessert' value='0' class='qty' max="10" min="0" />
+                                <input type='button' value='+' class='qtyplus' field='Dessert' />
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="orderStatus" style="color:red;"></div>
+y
+            <a id="submitOrderBtn2" class="btn btn-lg btn-danger " style="font-size: 185%;padding: 0% 25%;">提交訂單</a>
+    </div>
+
+    </center>
+    <center>
+        <div class="table">
+            <div><strong>內湖高中第11屆資訊班成果發表會 nhcs_11th</strong></div>
+            <div>地點:內湖高中國際會議廳 nhcs_11th</div>
+            <div>時間:5月24日 PM 13:10 ~ 16:10</div>
+            <div><strong>第四組</strong></div>
+            <div>20808張喆崴 IG: kr.v.louis</div>
+            <div>20812陳俊霖 IG: jun_lin_27</div>
+            <div>20819蔡王竤 IG: jimmytsai0607</div>
+            <div>20823簡新城 IG: mashiro12321</div>
+        </div>
+    </center>
+
+
+    </div>
+</body>
+
+<!--SCRIPT-->
+
+
+
+<script>
+    $("#lightslider").lightSlider({
+        // 參數設定[註1]
+        autoWidth: false,//是否可以自訂項目寬度
+        keyPress: true,//這行程式碼設定是否啟用鍵盤控制
+        //rtl:false,設置幻燈片的滾動方向，默認值為false，即從左到右滾動。如果設置為true，則幻燈片會從右到左滾動。
+        adaptiveHeight: true,//每個幻燈片的高度是否根據其內容自動調整
+        vertical: false,//垂直或水平滾動
+        //verticalHeight：設置垂直滾動的幻燈片的高度，默認值為500像素。
+        //vThumbWidth：設置垂直滾動模式下縮略圖的寬度。
+        slideMargin: 0,//邊界像素
+        //currentPagerPosition：設置分頁器當前頁碼的位置，可設置為'left', 'middle', 'right'。
+        //enableTouch：啟用或禁用觸摸滾動功能，默認為true。
+        //enableDrag：啟用或禁用拖動滾動功能，默認為true。
+        //freeMove：設置是否允許自由滑動，默認為true。
+        //thumbItem:3,//設置顯示的縮略圖數量。
+        speed: 400, // 切換速度
+        pause: 2000, //滑動暫停的時間
+        auto: true, // 自動切換
+        loop: true,//循環滑動
+        //addClass: '',添加自訂的class名稱
+        mode: "slide",//這行程式碼設定為滑動模式，其他選項為slide和fade和slideVertical。
+        item: 1, // 顯示數量
+        responsive: [
+            {
+                breakpoint: 960, // 當螢幕大於此寬度時，則啟用此設定值
+                settings: {
+                    item: 2, // 顯示數量
+                    slideMove: 1 // 一次切換數量
+                }
+            },
+            {
+                breakpoint: 640, // 當螢幕大於此寬度時，則啟用此設定值
+                settings: {
+                    item: 1, // 顯示張數
+                    slideMove: 1 // 一次切換數量
+                }
+            }
+        ]
+    });
+
+
+
+
+
+    //三條線
+
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "18%";
+        document.getElementById("main").style.marginLeft = "18%";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+
+    //自動跳出登入畫面
+
+    $(window).ready(() => {
+        $('#loginModal').modal('show');
+        // setTimeout(() => $('#loginModal').modal('show'), 1000);
+        // setTimeout(() => $('#loginModal').modal('hide'), 4000);
+    })
+    const show = () => {
+        $('#loginModal').modal('show');
+    }
+
+
+    //數量加減
+
+    $(function () {
+        $('.qtyplus').click(function (e) {
+            e.preventDefault();
+            const fieldName = $(this).attr('field');
+            const $input = $('input[name=' + fieldName + ']');
+            const val = parseInt($input.val());
+            const max = parseInt($input.attr('max'));
+            if (!isNaN(max) && val >= max) {
+                return false;
+            }
+            if (!isNaN(val)) {
+                $input.val(val + 1);
+            } else {
+                $input.val(0);
+            }
+        });
+
+        $('.qtyminus').click(function (e) {
+            e.preventDefault();
+            const fieldName = $(this).attr('field');
+            const $input = $('input[name=' + fieldName + ']');
+            const val = parseInt($input.val());
+            const min = parseInt($input.attr('min'));
+            if (!isNaN(min) && val <= min) {
+                return false;
+            }
+            if (!isNaN(val) && val > 0) {
+                $input.val(val - 1);
+            } else {
+                $input.val(0);
+            }
+        });
+        
+        //確認訂單內容
+        $('#submitOrderBtn, #submitOrderBtn2').click(function (e) {
+            e.preventDefault();
+            const orders = [];
+            let invalidInput = false;
+            $('input.qty').each((i, el) => {
+                const qty = parseInt($(el).val());
+                const max = parseInt($(el).attr('max'));
+                if (qty > max) {
+                    invalidInput = true;
+                    $(el).addClass('invalid');
+                } else {
+                    $(el).removeClass('invalid');
+                }
+                if (!invalidInput) {
+                    const foodName = $('div.FoodName').eq(i).text();
+                    let orderMsg = "";
+                    let tableRows = '';
+                    let foodCategory = "";
+                    let currentCategory = "";
+                    let currentItems = "";
+                    let totalPrice = 0;
+                    let totalQty = 0;
+                    if (qty > 0) {
+                        orders.push({ name: foodName, qty: qty});
+                    }
+
+                    orders.forEach((order) => {
+                        const foodName = order.name;
+                        const foodQty = order.qty;
+                        const foodPrice = findFoodPrice(foodName);
+                        if (foodQty > 0) {
+                            order.price = findFoodPrice(order.name);
+                            foodCategory = findFoodCategory(foodName);
+                            order.category = foodCategory;
+                            if (currentCategory === "" || currentCategory === foodCategory) {
+                                currentItems += "<div style='display: flex; justify-content: space-between; align-items: center;'>" + "<span style='width: 45%;'>" + foodName + "</span>" + "<span style=' text-align: center;'>" + foodQty + "</span>" + "<span style='width: 45%; text-align: right;'>$" + foodPrice.toFixed(2) + "</span></div>";
+                                //tableRows += '<tr><td>' + foodName + '</td><td>' + foodQty + '</td><td>$' + foodPrice.toFixed(2) + '</td></tr>';
+                                totalQty += foodQty;
+                            } else {
+                                //orderMsg += "<div>" + currentCategory + "</div>" + currentItems;
+                                orderMsg += currentItems;
+                                currentItems = "<div style='display: flex; justify-content: space-between; align-items: center;'>" + "<span style='width: 45%;'>" + foodName + "</span>" + "<span style=' text-align: center;'>" + foodQty + "</span>" + "<span style='width: 45%; text-align: right;'>$" + foodPrice.toFixed(2) + "</span></div>";
+                                //tableRows += '<tr><td>' + foodName + '</td><td>' + foodQty + '</td><td>$' + foodPrice.toFixed(2) + '</td></tr>';
+                                totalQty += foodQty;
+                            }
+                            currentCategory = foodCategory;
+                            // 取得該餐點的價格，轉換為數字，乘上數量，加總到總價上
+                            totalPrice += parseInt(foodPrice) * foodQty;
+                        }
+                    });
+                    if (currentCategory !== "") {
+                        //orderMsg += "<div>" + currentCategory + "</div>" + currentItems;
+                        let tableHTML = '<table><tr><th>品名</th><th>數量</th><th>價格</th></tr>' + tableRows + '</table>';
+                        //tableHTML += '<hr/><div>共計：' + totalQty + '份<span style="float:right;">總計：$' + totalPrice.toFixed(2) + '</span></div>';
+                        orderMsg += "<div>" + currentItems + "</div>";
+                        orderMsg += "<hr/>";
+                        orderMsg += "<div>共計：" + totalQty + "份<span style='float:right;'>總計：$" + totalPrice.toFixed(2) + "</span></div>";
+                        document.querySelector("#checkout .modal-message").innerHTML = "<div style='display: flex; justify-content: space-between; align-items: center;'>" + "<span style='width: 45%;'>&nbsp品名&nbsp</span>" + "<span style=' text-align: center;'>數量</span>" + "<span style='width: 45%; text-align: right;'>價格&nbsp&nbsp</span></div><hr/>"
+                            + orderMsg;
+                        document.querySelector(".modal-message2").style.display = "block";
+                        //console.log(tableHTML);
+                        //console.log(document.querySelector("#checkout .modal-message").innerHTML);
+                    } else {
+                        document.querySelector("#checkout .modal-message").innerHTML = "<div style='display: flex; justify-content: center; align-items: center; height: 100%;'>您還未點餐</div>";
+                        document.querySelector(".modal-message2").style.display = "none";
+                        $("#checkout").modal("show");
+                    }
+
+                    $("#checkout").modal("show");
+
+                    function findFoodCategory(foodName) {
+                        const foodDivs = document.querySelectorAll(".col");
+                        let category = "";
+                        foodDivs.forEach((foodDiv) => {
+                            const divFoodName = foodDiv.querySelector(".FoodName").textContent;
+                            if (divFoodName === foodName) {
+                                const divParent = foodDiv.parentElement.parentElement;
+                                category = divParent.previousElementSibling.querySelector("a").textContent.trim();
+                            }
+                        });
+                        return category;
+                    }
+
+                    function findFoodPrice(foodName) {
+                        const foodDivs = document.querySelectorAll(".col");
+                        let price = 0;
+                        foodDivs.forEach((foodDiv) => {
+                            const divFoodName = foodDiv.querySelector(".FoodName").textContent;
+                            if (divFoodName === foodName) {
+                                const priceElm = foodDiv.querySelector(".FoodPrice");
+                                price = Number(priceElm.textContent.replace(/[^0-9.-]+/g, ""));
+                            }
+                        });
+                        return price;
+                    }
+                } else {
+                        document.querySelector("#checkout .modal-message").innerHTML = "<div style='display: flex; justify-content: center; align-items: center; height: 100%;'>超過最大數量:" + max + "</div>";
+                        document.querySelector(".modal-message2").style.display = "none";
+                        $("#checkout").modal("show");
+                    }
+            });
+
+            //console.log('max values:', $('input.qty').map((i, el) => $(el).attr('max')).get());
+            console.log('input values:', $('input.qty').map((i, el) => $(el).val()).get());
+
+            // 確定所有輸入框失焦，以更新輸入值的樣式
+            $('input.qty').blur();
+
+
+            // 向服務器提交訂單資料
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost:8080/submit_order',
+                data: JSON.stringify({ orders: orders }),
+                contentType: 'application/json',
+                success: function (response) {
+                    console.log("response:",response);
+                    $('#orderStatus').text(response);
+                    // 在此處理回應
+                    
+                    if (invalidInput) {
+                        $('#submitOrderBtn, #submitOrderBtn2').popover('show');
+                    } else {
+                        $('#submitOrderBtn, #submitOrderBtn2').popover('hide');
+                    }
+
+                },
+                error: function (xhr, status, error) {
+                    console.log("Error",xhr.responseText);
+                    // 在此處理錯誤
+                }
+            });
+        });
+    });
+
+    window.onbeforeunload = function () {
+        const qtyInputs = $('input.qty');
+        for (let i = 0; i < qtyInputs.length; i++) {
+            const qty = parseInt(qtyInputs[i].value);
+            if (qty > 0) {
+                return "確定要離開此頁面嗎？";
+            }
+        }
+    };
+
+
+    // 螢幕長度寬度
+
+    function button() {
+        console.log("width", document.documentElement.scrollWidth);//1003
+        console.log("height", document.documentElement.scrollHeight);//1504
+    }
+</script>
+
+
+
+</html>
+
+<!--
+orders.forEach((order) => {
+                        const foodName = order.name;
+                        const foodQty = order.qty;
+                        const foodPrice = findFoodPrice(foodName);
+                        if (foodQty > 0) {
+                            foodCategory = findFoodCategory(foodName);
+                            if (currentCategory === "" || currentCategory === foodCategory) {
+                                currentItems += "<li>" + foodQty + "份" + foodName + "<span style='float:right;'>$" + foodPrice.toFixed(2) + "</span></li>";
+                                totalQty += foodQty;
+                            } else {
+                                orderMsg += "<li>" + currentCategory + "</li><ul>" + currentItems + "</ul>";
+                                currentItems = "<li>" + foodQty + "份" + foodName + "<span style='float:right;'>$" + foodPrice.toFixed(2) + "</span></li>";
+                                totalQty += foodQty;
+                            }
+                            currentCategory = foodCategory;
+                            // 取得該餐點的價格，轉換為數字，乘上數量，加總到總價上
+                            totalPrice += parseInt(foodPrice) * foodQty;
+                        }
+                    });
+
+                    if (currentCategory !== "") {
+                        //orderMsg += "<li>" + currentCategory + "</li><ul>" + currentItems + "</ul>";
+                        orderMsg += "<ul>" + currentItems + "</ul>";
+                        orderMsg += "<hr/>";
+                        orderMsg += "<li>共計：" + totalQty + "份<span style='float:right;'>總計：$" + totalPrice.toFixed(2) + "</span></li>";
+                        console.log(document.querySelector("#checkout .modal-message").innerHTML);
+                        document.querySelector("#checkout .modal-message").innerHTML = "您點了：" + "<div style='display: flex; justify-content: space-between; align-items: center;'>" + "<span style='width: 45%;'>&nbsp品名&nbsp</span>" + "<span style=' text-align: center;'>數量</span>" + "<span style='width: 45%; text-align: right;'>價格&nbsp&nbsp</span></div><hr/>"
+                        + orderMsg + "</ul>";
+                        document.querySelector(".modal-message2").style.display = "block";
+                    } else {
+                        console.log(document.querySelector("#checkout .modal-body").innerHTML);
+                        document.querySelector("#checkout .modal-message").innerHTML = "<div style='display: flex; justify-content: center; align-items: center; height: 100%;'>您還未點餐</div>";
+                        document.querySelector(".modal-message2").style.display = "none";
+                    }
+-->
